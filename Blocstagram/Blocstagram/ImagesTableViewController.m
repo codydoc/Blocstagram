@@ -106,6 +106,7 @@
 
 -(NSArray *) items{
 
+    //New method to simply code
     return [DataSource sharedInstance].mediaItems;
 
 }
