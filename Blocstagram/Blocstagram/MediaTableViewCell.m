@@ -115,6 +115,7 @@ static NSParagraphStyle *paragraphStyle;
         NSRange commentRange = [baseString rangeOfString:comment.text];
         [oneCommentString addAttribute:NSFontAttributeName value:boldFont range:usernameRange];
         
+        //Makes the first comment orange
         if(isFirst){
  [oneCommentString addAttribute:NSForegroundColorAttributeName value:firstCommentOrange range:commentRange];
             isFirst = false;
