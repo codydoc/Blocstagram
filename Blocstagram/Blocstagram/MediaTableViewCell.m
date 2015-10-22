@@ -26,6 +26,7 @@ static UIColor *commentLabelGray;
 static UIColor *linkColor;
 static UIColor *firstCommentOrange;
 static NSParagraphStyle *paragraphStyle;
+static NSParagraphStyle *rightParagraphStyle;
 
 
 @implementation MediaTableViewCell
@@ -71,6 +72,17 @@ static NSParagraphStyle *paragraphStyle;
     mutableParagraphStyle.paragraphSpacingBefore = 5;
     
     paragraphStyle = mutableParagraphStyle;
+    
+    NSMutableParagraphStyle *mutableParagraphStyle1 = [[NSMutableParagraphStyle alloc] init];
+    mutableParagraphStyle1.headIndent = 20.0;
+    mutableParagraphStyle1.firstLineHeadIndent = 20.0;
+    mutableParagraphStyle1.tailIndent = -20.0;
+    mutableParagraphStyle1.paragraphSpacingBefore = 5;
+    mutableParagraphStyle1.alignment = NSTextAlignmentRight;
+    
+    rightParagraphStyle = mutableParagraphStyle1;
+    
+    
 }
 
 
@@ -100,6 +112,7 @@ static NSParagraphStyle *paragraphStyle;
     NSMutableAttributedString *commentString = [[NSMutableAttributedString alloc] init];
     
     BOOL isFirst = TRUE;
+    int count = 1;
     
     for (Comment *comment in self.mediaItem.comments) {
         
@@ -109,15 +122,18 @@ static NSParagraphStyle *paragraphStyle;
         // Make a string that says "username comment" followed by a line break
         NSString *baseString = [NSString stringWithFormat:@"%@ %@\n", comment.from.userName, comment.text];
         
+        if(count%2==1){
         // Make an attributed string, with the "username" bold
         
         NSMutableAttributedString *oneCommentString = [[NSMutableAttributedString alloc] initWithString:baseString attributes:@{NSFontAttributeName : lightFont, NSParagraphStyleAttributeName : paragraphStyle}];
+            
+        
         
         NSRange usernameRange = [baseString rangeOfString:comment.from.userName];
         NSRange commentRange = [baseString rangeOfString:comment.text];
         [oneCommentString addAttribute:NSFontAttributeName value:boldFont range:usernameRange];
         
-        //Makes the first comment orange
+        //Make the first comment orange
         if(isFirst){
  [oneCommentString addAttribute:NSForegroundColorAttributeName value:firstCommentOrange range:commentRange];
             isFirst = false;
@@ -126,7 +142,37 @@ static NSParagraphStyle *paragraphStyle;
         else{
             [oneCommentString addAttribute:NSForegroundColorAttributeName value:linkColor range:usernameRange];}
         
+        
+        
         [commentString appendAttributedString:oneCommentString];
+        }
+        
+        if(count%2==0){
+            // Make an attributed string, with the "username" bold
+            
+            NSMutableAttributedString *oneCommentString = [[NSMutableAttributedString alloc] initWithString:baseString attributes:@{NSFontAttributeName : lightFont, NSParagraphStyleAttributeName : rightParagraphStyle}];
+            
+            
+            
+            NSRange usernameRange = [baseString rangeOfString:comment.from.userName];
+            NSRange commentRange = [baseString rangeOfString:comment.text];
+            [oneCommentString addAttribute:NSFontAttributeName value:boldFont range:usernameRange];
+            
+            //Make the first comment orange
+            if(isFirst){
+                [oneCommentString addAttribute:NSForegroundColorAttributeName value:firstCommentOrange range:commentRange];
+                isFirst = false;
+            }
+            
+            else{
+                [oneCommentString addAttribute:NSForegroundColorAttributeName value:linkColor range:usernameRange];}
+            
+            
+            
+            [commentString appendAttributedString:oneCommentString];
+        }
+        
+        count++;
     }
     
     return commentString;
