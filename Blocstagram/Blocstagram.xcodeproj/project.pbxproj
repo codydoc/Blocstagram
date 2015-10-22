@@ -27,6 +27,7 @@
 		694D48EE1BD017F600D45F04 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48ED1BD017F600D45F04 /* Media.m */; };
 		694D48F11BD0186A00D45F04 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F01BD0186A00D45F04 /* Comment.m */; };
 		694D48F41BD0190200D45F04 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F31BD0190200D45F04 /* DataSource.m */; };
+		694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		694D48F01BD0186A00D45F04 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Blocstagram/Comment.m; sourceTree = "<group>"; };
 		694D48F21BD0190200D45F04 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = Blocstagram/DataSource.h; sourceTree = "<group>"; };
 		694D48F31BD0190200D45F04 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = Blocstagram/DataSource.m; sourceTree = "<group>"; };
+		694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = Blocstagram/MediaTableViewCell.h; sourceTree = "<group>"; };
+		694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = Blocstagram/MediaTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 			children = (
 				694D48E61BCCB00D00D45F04 /* ImagesTableViewController.h */,
 				694D48E71BCCB00D00D45F04 /* ImagesTableViewController.m */,
+				694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */,
+				694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */,
 				694D48E91BD015E800D45F04 /* User.h */,
 				694D48EC1BD017F600D45F04 /* Media.h */,
 				694D48ED1BD017F600D45F04 /* Media.m */,
@@ -285,6 +290,7 @@
 			files = (
 				694D48EB1BD015E800D45F04 /* User.m in Sources */,
 				694D48F11BD0186A00D45F04 /* Comment.m in Sources */,
+				694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */,
 				694D48EE1BD017F600D45F04 /* Media.m in Sources */,
 				694D48B11BCCAC4100D45F04 /* AppDelegate.m in Sources */,
 				694D48F41BD0190200D45F04 /* DataSource.m in Sources */,
