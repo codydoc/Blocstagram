@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6933D7EB1BE6971300DA94BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933D7EA1BE6971300DA94BE /* LoginViewController.m */; };
 		694D48AE1BCCAC4100D45F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48AD1BCCAC4100D45F04 /* main.m */; };
 		694D48B11BCCAC4100D45F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48B01BCCAC4100D45F04 /* AppDelegate.m */; };
 		694D48B91BCCAC4100D45F04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694D48B81BCCAC4100D45F04 /* Images.xcassets */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6933D7E91BE6971300DA94BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Blocstagram/LoginViewController.h; sourceTree = "<group>"; };
+		6933D7EA1BE6971300DA94BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Blocstagram/LoginViewController.m; sourceTree = "<group>"; };
 		694D48A81BCCAC4100D45F04 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D48AC1BCCAC4100D45F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694D48AD1BCCAC4100D45F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 		694D489F1BCCAC4100D45F04 = {
 			isa = PBXGroup;
 			children = (
+				6933D7E91BE6971300DA94BE /* LoginViewController.h */,
+				6933D7EA1BE6971300DA94BE /* LoginViewController.m */,
 				694D48E61BCCB00D00D45F04 /* ImagesTableViewController.h */,
 				694D48E71BCCB00D00D45F04 /* ImagesTableViewController.m */,
 				694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */,
@@ -293,6 +298,7 @@
 				694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */,
 				694D48EE1BD017F600D45F04 /* Media.m in Sources */,
 				694D48B11BCCAC4100D45F04 /* AppDelegate.m in Sources */,
+				6933D7EB1BE6971300DA94BE /* LoginViewController.m in Sources */,
 				694D48F41BD0190200D45F04 /* DataSource.m in Sources */,
 				694D48AE1BCCAC4100D45F04 /* main.m in Sources */,
 				694D48E81BCCB00D00D45F04 /* ImagesTableViewController.m in Sources */,
