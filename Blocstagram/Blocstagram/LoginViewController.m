@@ -44,6 +44,26 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
         [self.webView loadRequest:request];
     }
     
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:nil action:@selector(reloadView)];
+    self.navigationItem.leftBarButtonItem = homeButton;
+    
+}
+
+-(void)reloadView {
+
+    NSLog(@"In reloadview");
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token", [DataSource instagramClientID], [self redirectURI]];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    if (url) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:request];
+    }
+    
+    
+    //[self.webView goBack];
+    
 }
 
 - (void) viewWillLayoutSubviews{
