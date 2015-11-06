@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "DataSource.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UIWebViewDelegate>
 
 @property (nonatomic, weak) UIWebView *webView;
 

@@ -106,13 +106,13 @@
 				694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */,
 				694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */,
 				694D48E91BD015E800D45F04 /* User.h */,
+				694D48EA1BD015E800D45F04 /* User.m */,
 				694D48EC1BD017F600D45F04 /* Media.h */,
 				694D48ED1BD017F600D45F04 /* Media.m */,
 				694D48EF1BD0186A00D45F04 /* Comment.h */,
 				694D48F01BD0186A00D45F04 /* Comment.m */,
 				694D48F21BD0190200D45F04 /* DataSource.h */,
 				694D48F31BD0190200D45F04 /* DataSource.m */,
-				694D48EA1BD015E800D45F04 /* User.m */,
 				694D48AA1BCCAC4100D45F04 /* Blocstagram */,
 				694D48C41BCCAC4100D45F04 /* BlocstagramTests */,
 				694D48A91BCCAC4100D45F04 /* Products */,
@@ -228,7 +228,7 @@
 		694D48A01BCCAC4100D45F04 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Bloc;
 				TargetAttributes = {
 					694D48A71BCCAC4100D45F04 = {
@@ -356,6 +356,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
