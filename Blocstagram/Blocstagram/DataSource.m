@@ -72,6 +72,14 @@
                             [self downloadImageForMediaItem:mediaItem];
                         }
                         
+                        
+                         
+                         [self requestNewItemsWithCompletionHandler:^(NSError *error) {
+                         NSLog(@"Error Loading Images in datasource init");
+                         }];
+                         
+                         
+                        
                     } else {
                         [self populateDataWithParameters:nil completionHandler:nil];
                     }
