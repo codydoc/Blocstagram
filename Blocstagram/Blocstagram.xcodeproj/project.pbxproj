@@ -29,6 +29,7 @@
 		694D48F11BD0186A00D45F04 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F01BD0186A00D45F04 /* Comment.m */; };
 		694D48F41BD0190200D45F04 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F31BD0190200D45F04 /* DataSource.m */; };
 		694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */; };
+		B0006CD6388C05BEC0E89905 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F692032188052B5808041F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260B3A8CAC5CF6143E1CD202 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2F692032188052B5808041F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5847001093F65C1598B11115 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6933D7E91BE6971300DA94BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Blocstagram/LoginViewController.h; sourceTree = "<group>"; };
 		6933D7EA1BE6971300DA94BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Blocstagram/LoginViewController.m; sourceTree = "<group>"; };
 		694D48A81BCCAC4100D45F04 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0006CD6388C05BEC0E89905 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F64FD8B6A73F7A1CB433E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5847001093F65C1598B11115 /* Pods.debug.xcconfig */,
+				260B3A8CAC5CF6143E1CD202 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		694D489F1BCCAC4100D45F04 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +130,8 @@
 				694D48AA1BCCAC4100D45F04 /* Blocstagram */,
 				694D48C41BCCAC4100D45F04 /* BlocstagramTests */,
 				694D48A91BCCAC4100D45F04 /* Products */,
+				00F64FD8B6A73F7A1CB433E8 /* Pods */,
+				B31ADD00057E4F3340F3D22E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +200,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		B31ADD00057E4F3340F3D22E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F692032188052B5808041F6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 694D48CB1BCCAC4100D45F04 /* Build configuration list for PBXNativeTarget "Blocstagram" */;
 			buildPhases = (
+				F5ADE554DF50548A08C6CF43 /* Check Pods Manifest.lock */,
 				694D48A41BCCAC4100D45F04 /* Sources */,
 				694D48A51BCCAC4100D45F04 /* Frameworks */,
 				694D48A61BCCAC4100D45F04 /* Resources */,
+				D3949FE1B00FC0E6F0EDCF1C /* Embed Pods Frameworks */,
+				A853A47FD1372BA5AAD4769B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,6 +314,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A853A47FD1372BA5AAD4769B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3949FE1B00FC0E6F0EDCF1C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5ADE554DF50548A08C6CF43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		694D48A41BCCAC4100D45F04 /* Sources */ = {
@@ -420,6 +495,7 @@
 		};
 		694D48CC1BCCAC4100D45F04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5847001093F65C1598B11115 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
@@ -430,6 +506,7 @@
 		};
 		694D48CD1BCCAC4100D45F04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 260B3A8CAC5CF6143E1CD202 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
