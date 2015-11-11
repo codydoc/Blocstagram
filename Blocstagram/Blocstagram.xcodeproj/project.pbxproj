@@ -29,6 +29,7 @@
 		694D48F11BD0186A00D45F04 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F01BD0186A00D45F04 /* Comment.m */; };
 		694D48F41BD0190200D45F04 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F31BD0190200D45F04 /* DataSource.m */; };
 		694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */; };
+		697EC6E31BF2424300FBFA99 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E21BF2424300FBFA99 /* MediaFullScreenViewController.m */; };
 		B0006CD6388C05BEC0E89905 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F692032188052B5808041F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		694D48F31BD0190200D45F04 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = Blocstagram/DataSource.m; sourceTree = "<group>"; };
 		694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = Blocstagram/MediaTableViewCell.h; sourceTree = "<group>"; };
 		694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = Blocstagram/MediaTableViewCell.m; sourceTree = "<group>"; };
+		697EC6E11BF2424300FBFA99 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaFullScreenViewController.h; path = Blocstagram/MediaFullScreenViewController.h; sourceTree = "<group>"; };
+		697EC6E21BF2424300FBFA99 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaFullScreenViewController.m; path = Blocstagram/MediaFullScreenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				694D48E71BCCB00D00D45F04 /* ImagesTableViewController.m */,
 				694D48F51BD5D3D900D45F04 /* MediaTableViewCell.h */,
 				694D48F61BD5D3D900D45F04 /* MediaTableViewCell.m */,
+				697EC6E11BF2424300FBFA99 /* MediaFullScreenViewController.h */,
+				697EC6E21BF2424300FBFA99 /* MediaFullScreenViewController.m */,
 				694D48E91BD015E800D45F04 /* User.h */,
 				694D48EA1BD015E800D45F04 /* User.m */,
 				694D48EC1BD017F600D45F04 /* Media.h */,
@@ -368,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				697EC6E31BF2424300FBFA99 /* MediaFullScreenViewController.m in Sources */,
 				694D48EB1BD015E800D45F04 /* User.m in Sources */,
 				694D48F11BD0186A00D45F04 /* Comment.m in Sources */,
 				694D48F71BD5D3D900D45F04 /* MediaTableViewCell.m in Sources */,
