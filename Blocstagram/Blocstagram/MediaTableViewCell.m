@@ -10,6 +10,7 @@
 #import "Media.h"
 #import "Comment.h"
 #import "User.h"
+#import "DataSource.h"
 
 @interface MediaTableViewCell() <UIGestureRecognizerDelegate>
 
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 @property (nonatomic,strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer * longPressGestureRecognizer;
+@property (nonatomic,strong) UITapGestureRecognizer *twoTapGestureRecognizer;
 
 @end
 
@@ -53,6 +55,9 @@ static NSParagraphStyle *paragraphStyle;
         self.longPressGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.longPressGestureRecognizer];
         
+        self.twoTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(twoTapFired:)];
+        self.twoTapGestureRecognizer.numberOfTouchesRequired = 2;
+        [self.mediaImageView addGestureRecognizer:self.twoTapGestureRecognizer];
         
         self.usernameAndCaptionLabel = [[UILabel alloc] init];
         self.usernameAndCaptionLabel.numberOfLines = 0;
@@ -260,6 +265,17 @@ static NSParagraphStyle *paragraphStyle;
     
         [self.delegate cell:self didLongPressImageView:self.mediaImageView];
     }
+
+}
+
+-(void) twoTapFired:(UITapGestureRecognizer *)sender{
+
+    NSLog(@"TwoTapFired is a go");
+    
+    DataSource *downloadData = [[DataSource alloc] init];
+    
+    [downloadData downdloadImageForMediaItem:self.mediaItem];
+  
 
 }
 
