@@ -272,10 +272,11 @@ static NSParagraphStyle *paragraphStyle;
 
     NSLog(@"TwoTapFired is a go");
     
+    if(self.mediaItem.image){
     DataSource *downloadData = [[DataSource alloc] init];
     
-    [downloadData downdloadImageForMediaItem:self.mediaItem];
-  
+    [downloadData downloadImageForMediaItem:self.mediaItem];
+    }
 
 }
 
