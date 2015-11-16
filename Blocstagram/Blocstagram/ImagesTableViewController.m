@@ -83,10 +83,15 @@
 }
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+   //HERE
+    /*
     Media *mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     if (mediaItem.downloadState == MediaDownloadStateNeedsImage) {
         [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
     }
+     */
+
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -204,7 +209,29 @@
 
 // #4
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
     [self infiniteScrollIfNecessary];
+    
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+
+    
+    
+    if(!scrollView.dragging){
+        
+    for (MediaTableViewCell *cell in [self.tableView visibleCells]){
+    
+        
+        if (cell.mediaItem.downloadState == MediaDownloadStateNeedsImage) {
+                [[DataSource sharedInstance] downloadImageForMediaItem:cell.mediaItem];
+            }
+        
+        
+        }
+    
+    }
+
 }
 
 
