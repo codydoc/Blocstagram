@@ -214,11 +214,9 @@
     
 }
 
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
 
-    
-    
-    if(!scrollView.dragging){
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
         
     for (MediaTableViewCell *cell in [self.tableView visibleCells]){
     
@@ -230,9 +228,10 @@
         
         }
     
-    }
 
 }
+
+
 
 
 #pragma mark - MediaTableViewCellDelegate
