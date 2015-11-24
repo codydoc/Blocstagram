@@ -47,13 +47,13 @@
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
         animation.fromValue = @0;
-        animation.toValue = @(M_PI*2);
+        animation.toValue = @(M_PI);
         animation.duration = animationDuration;
         animation.timingFunction = linearCurve;
         animation.removedOnCompletion = NO;
         animation.repeatCount = INFINITY;
         animation.fillMode = kCAFillModeForwards;
-        animation.autoreverses = NO;
+        animation.autoreverses = YES;
         [_circleLayer.mask addAnimation:animation forKey:@"rotate"];
         
         CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
@@ -84,9 +84,9 @@
     
     if(self){
     
-        self.strokeThickness = 1;
-        self.radius = 12;
-        self.strokeColor = [UIColor purpleColor];
+        self.strokeThickness = 2;
+        self.radius = 15;
+        self.strokeColor = [UIColor blueColor];
     
     }
 
