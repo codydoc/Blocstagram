@@ -32,6 +32,7 @@
 		697EC6E31BF2424300FBFA99 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E21BF2424300FBFA99 /* MediaFullScreenViewController.m */; };
 		697EC6E61C02E19A00FBFA99 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E51C02E19A00FBFA99 /* CircleSpinnerView.m */; };
 		697EC6E91C03933F00FBFA99 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E81C03933F00FBFA99 /* LikeButton.m */; };
+		69D591311C04E9BE00BAD201 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591301C04E9BE00BAD201 /* ComposeCommentView.m */; };
 		B0006CD6388C05BEC0E89905 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F692032188052B5808041F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		697EC6E51C02E19A00FBFA99 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleSpinnerView.m; path = Blocstagram/CircleSpinnerView.m; sourceTree = "<group>"; };
 		697EC6E71C03933F00FBFA99 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LikeButton.h; path = Blocstagram/LikeButton.h; sourceTree = "<group>"; };
 		697EC6E81C03933F00FBFA99 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LikeButton.m; path = Blocstagram/LikeButton.m; sourceTree = "<group>"; };
+		69D5912F1C04E9BE00BAD201 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposeCommentView.h; path = Blocstagram/ComposeCommentView.h; sourceTree = "<group>"; };
+		69D591301C04E9BE00BAD201 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposeCommentView.m; path = Blocstagram/ComposeCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 		694D489F1BCCAC4100D45F04 = {
 			isa = PBXGroup;
 			children = (
+				69D5912F1C04E9BE00BAD201 /* ComposeCommentView.h */,
+				69D591301C04E9BE00BAD201 /* ComposeCommentView.m */,
 				6933D7E91BE6971300DA94BE /* LoginViewController.h */,
 				6933D7EA1BE6971300DA94BE /* LoginViewController.m */,
 				694D48E61BCCB00D00D45F04 /* ImagesTableViewController.h */,
@@ -393,6 +398,7 @@
 				6933D7EB1BE6971300DA94BE /* LoginViewController.m in Sources */,
 				697EC6E91C03933F00FBFA99 /* LikeButton.m in Sources */,
 				694D48F41BD0190200D45F04 /* DataSource.m in Sources */,
+				69D591311C04E9BE00BAD201 /* ComposeCommentView.m in Sources */,
 				694D48AE1BCCAC4100D45F04 /* main.m in Sources */,
 				694D48E81BCCB00D00D45F04 /* ImagesTableViewController.m in Sources */,
 			);
