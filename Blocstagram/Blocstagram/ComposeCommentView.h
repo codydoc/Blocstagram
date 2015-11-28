@@ -18,6 +18,7 @@
 
 @end
 
+
 @interface ComposeCommentView : UIView
 
 @property (nonatomic, weak) NSObject <ComposeCommentViewDelegate> *delegate;
