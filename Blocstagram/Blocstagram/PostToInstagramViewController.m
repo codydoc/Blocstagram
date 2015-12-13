@@ -92,6 +92,7 @@
     self.navigationItem.title = NSLocalizedString(@"Apply Filter", @"apply filter view title");
 }
 
+//Is the code below what it wants in a subclass?
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
@@ -259,6 +260,47 @@
             [self addCIImageToCollectionView:moodyFilter.outputImage withFilterTitle:NSLocalizedString(@"Moody", @"Moody Filter")];
         }
     }];
+    
+    // ColorInvert filter
+    
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *colorInvert = [CIFilter filterWithName:@"CIColorInvert"];
+        
+        if (colorInvert) {
+            [colorInvert setValue:sourceCIImage forKey:kCIInputImageKey];
+            [self addCIImageToCollectionView:colorInvert.outputImage withFilterTitle:NSLocalizedString(@"ColorInvert", @"ColorInvert Filter")];
+        }
+    }];
+    
+    
+    
+    // Chained filter
+    
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *instant = [CIFilter filterWithName:@"CIPhotoEffectInstant"];
+        
+        CIFilter *comicEffect = [CIFilter filterWithName:@"CIComicEffect"];
+    
+        
+        if (instant) {
+            
+            [instant setValue:sourceCIImage forKey:kCIInputImageKey];
+            
+            CIImage *tempImage = instant.outputImage;
+            
+            if(comicEffect){
+            
+                [comicEffect setValue:tempImage forKey:kCIInputImageKey];
+                
+                tempImage = comicEffect.outputImage;
+                
+                [self addCIImageToCollectionView:tempImage withFilterTitle:NSLocalizedString(@"Mix1", @"Mix1 Filter")];
+                
+            }
+        }
+    }];
+         
+    
     
     // Drunk filter
     
