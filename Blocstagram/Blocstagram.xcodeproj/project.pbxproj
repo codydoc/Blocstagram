@@ -40,6 +40,7 @@
 		69D591401C14DB2400BAD201 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5913F1C14DB2400BAD201 /* CropImageViewController.m */; };
 		69D591431C14E52100BAD201 /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591421C14E52100BAD201 /* ImageLibraryViewController.m */; };
 		69D591461C180CA900BAD201 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591451C180CA900BAD201 /* PostToInstagramViewController.m */; };
+		69D591491C1E9E7300BAD201 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591481C1E9E7300BAD201 /* CollectionViewCell.m */; };
 		B0006CD6388C05BEC0E89905 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F692032188052B5808041F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,8 @@
 		69D591421C14E52100BAD201 /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLibraryViewController.m; path = Blocstagram/ImageLibraryViewController.m; sourceTree = "<group>"; };
 		69D591441C180CA900BAD201 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostToInstagramViewController.h; path = Blocstagram/PostToInstagramViewController.h; sourceTree = "<group>"; };
 		69D591451C180CA900BAD201 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostToInstagramViewController.m; path = Blocstagram/PostToInstagramViewController.m; sourceTree = "<group>"; };
+		69D591471C1E9E7300BAD201 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewCell.h; path = Blocstagram/CollectionViewCell.h; sourceTree = "<group>"; };
+		69D591481C1E9E7300BAD201 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewCell.m; path = Blocstagram/CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 			children = (
 				69D591441C180CA900BAD201 /* PostToInstagramViewController.h */,
 				69D591451C180CA900BAD201 /* PostToInstagramViewController.m */,
+				69D591471C1E9E7300BAD201 /* CollectionViewCell.h */,
+				69D591481C1E9E7300BAD201 /* CollectionViewCell.m */,
 				69D5912F1C04E9BE00BAD201 /* ComposeCommentView.h */,
 				69D591301C04E9BE00BAD201 /* ComposeCommentView.m */,
 				6933D7E91BE6971300DA94BE /* LoginViewController.h */,
@@ -435,6 +440,7 @@
 				694D48EE1BD017F600D45F04 /* Media.m in Sources */,
 				69D591341C0D228900BAD201 /* CameraToolbar.m in Sources */,
 				694D48B11BCCAC4100D45F04 /* AppDelegate.m in Sources */,
+				69D591491C1E9E7300BAD201 /* CollectionViewCell.m in Sources */,
 				69D591461C180CA900BAD201 /* PostToInstagramViewController.m in Sources */,
 				6933D7EB1BE6971300DA94BE /* LoginViewController.m in Sources */,
 				697EC6E91C03933F00FBFA99 /* LikeButton.m in Sources */,
