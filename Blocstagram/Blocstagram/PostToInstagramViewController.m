@@ -85,7 +85,7 @@
         self.navigationItem.rightBarButtonItem = self.sendBarButton;
     }
     
-    [self.filterCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.filterCollectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.filterCollectionView.backgroundColor = [UIColor whiteColor];
@@ -182,17 +182,17 @@
     thumbnail.image = self.filterImages[indexPath.row];
     label.text = self.filterTitles[indexPath.row];
     
-     */
+     
     
     static NSInteger imageViewTag = 1000;
     static NSInteger labelTag = 1001;
     
     UIImageView *thumbnail = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:labelTag];
+    */
     
-    
-    thumbnail.image = self.filterImages[indexPath.row];
-    label.text = self.filterTitles[indexPath.row];
+    cell.thumbnail.image = self.filterImages[indexPath.row];
+    cell.label.text = self.filterTitles[indexPath.row];
     
     
     return cell;

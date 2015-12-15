@@ -10,4 +10,7 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIImageView *thumbnail;
+@property (nonatomic, strong) UILabel *label;
+
 @end

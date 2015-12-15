@@ -23,32 +23,30 @@
         static NSInteger imageViewTag = 1000;
         static NSInteger labelTag = 1001;
         
-        UIImageView *thumbnail = (UIImageView *)[self.contentView viewWithTag:imageViewTag];
+        self.thumbnail = (UIImageView *)[self.contentView viewWithTag:imageViewTag];
         
-        UILabel *label = (UILabel *)[self.contentView viewWithTag:labelTag];
+        self.label = (UILabel *)[self.contentView viewWithTag:labelTag];
     
         
         CGFloat thumbnailEdgeSize = 158.00;
+
         
-        if (!thumbnail) {
-            thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, thumbnailEdgeSize, thumbnailEdgeSize)];
-            thumbnail.contentMode = UIViewContentModeScaleAspectFill;
-            thumbnail.tag = imageViewTag;
-            thumbnail.clipsToBounds = YES;
+            self.thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, thumbnailEdgeSize, thumbnailEdgeSize)];
+            self.thumbnail.contentMode = UIViewContentModeScaleAspectFill;
+            self.thumbnail.tag = imageViewTag;
+            self.thumbnail.clipsToBounds = YES;
             
-            [self.contentView addSubview:thumbnail];
-        }
+            [self.contentView addSubview:self.thumbnail];
         
-        if (!label) {
-            label = [[UILabel alloc] initWithFrame:CGRectMake(0, thumbnailEdgeSize, thumbnailEdgeSize, 20)];
-            label.tag = labelTag;
-            label.textAlignment = NSTextAlignmentCenter;
-            label.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:10];
-            [self.contentView addSubview:label];
-        }
         
-        //thumbnail.image = self.filterImages[indexPath.row];
-        //label.text = self.filterTitles[indexPath.row];
+        
+            self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, thumbnailEdgeSize, thumbnailEdgeSize, 20)];
+            self.label.tag = labelTag;
+            self.label.textAlignment = NSTextAlignmentCenter;
+            self.label.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:10];
+            [self.contentView addSubview:self.label];
+        
+
         
     }
     
