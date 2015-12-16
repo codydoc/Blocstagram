@@ -9,11 +9,12 @@
 #import "MediaFullScreenViewController.h"
 #import "Media.h"
 
-@interface MediaFullScreenViewController () <UIScrollViewDelegate>
+@interface MediaFullScreenViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *tapOut;
 
 @end
 
@@ -63,7 +64,13 @@
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
     
+    self.tapOut = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedOut:)];
     
+    self.tapOut.delegate = self;
+    
+    self.tapOut.cancelsTouchesInView = NO;
+    
+    [self.view.window addGestureRecognizer:self.tapOut];
 }
 
 -(void) viewWillLayoutSubviews{
@@ -176,6 +183,28 @@
     }
 
 }
+
+-(void) tappedOut:(UITapGestureRecognizer *) sender{
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+#pragma mark - UIGestureRecognizer Delegate
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return YES;
+}
+
+
 
 /*
 #pragma mark - Navigation
