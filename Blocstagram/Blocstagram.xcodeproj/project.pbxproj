@@ -32,6 +32,7 @@
 		697EC6E31BF2424300FBFA99 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E21BF2424300FBFA99 /* MediaFullScreenViewController.m */; };
 		697EC6E61C02E19A00FBFA99 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E51C02E19A00FBFA99 /* CircleSpinnerView.m */; };
 		697EC6E91C03933F00FBFA99 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 697EC6E81C03933F00FBFA99 /* LikeButton.m */; };
+		69CE54D01C22A1B9000FF2FA /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CE54CF1C22A1B9000FF2FA /* UserTests.m */; };
 		69D591311C04E9BE00BAD201 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591301C04E9BE00BAD201 /* ComposeCommentView.m */; };
 		69D591341C0D228900BAD201 /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591331C0D228900BAD201 /* CameraToolbar.m */; };
 		69D591371C0D360100BAD201 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D591361C0D360100BAD201 /* CameraViewController.m */; };
@@ -97,6 +98,7 @@
 		697EC6E51C02E19A00FBFA99 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleSpinnerView.m; path = Blocstagram/CircleSpinnerView.m; sourceTree = "<group>"; };
 		697EC6E71C03933F00FBFA99 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LikeButton.h; path = Blocstagram/LikeButton.h; sourceTree = "<group>"; };
 		697EC6E81C03933F00FBFA99 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LikeButton.m; path = Blocstagram/LikeButton.m; sourceTree = "<group>"; };
+		69CE54CF1C22A1B9000FF2FA /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		69D5912F1C04E9BE00BAD201 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposeCommentView.h; path = Blocstagram/ComposeCommentView.h; sourceTree = "<group>"; };
 		69D591301C04E9BE00BAD201 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposeCommentView.m; path = Blocstagram/ComposeCommentView.m; sourceTree = "<group>"; };
 		69D591321C0D228900BAD201 /* CameraToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraToolbar.h; path = Blocstagram/CameraToolbar.h; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				694D48C71BCCAC4100D45F04 /* BlocstagramTests.m */,
 				694D48C51BCCAC4100D45F04 /* Supporting Files */,
+				69CE54CF1C22A1B9000FF2FA /* UserTests.m */,
 			);
 			path = BlocstagramTests;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CE54D01C22A1B9000FF2FA /* UserTests.m in Sources */,
 				694D48C81BCCAC4100D45F04 /* BlocstagramTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
