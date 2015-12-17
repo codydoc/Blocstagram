@@ -95,6 +95,8 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
+    //Add autolayout constraints here
+    
     CGFloat edgeSize = MIN(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     
     if(CGRectGetHeight(self.view.bounds)<edgeSize *1.5){
@@ -114,6 +116,20 @@
     if (CGRectGetHeight(self.view.frame) > 500) {
         self.sendButton.frame = CGRectMake(buffer, CGRectGetHeight(self.view.frame) - buffer - buttonHeight, CGRectGetWidth(self.view.frame) - 2 * buffer, buttonHeight);
         
+        //Start
+        
+        NSLayoutConstraint *centerConstraint = [NSLayoutConstraint constraintWithItem:self.sendButton
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                            relatedBy:0
+                                                                               toItem:self.view
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                           multiplier:1
+                                                                             constant:0];
+        
+        [self.view addConstraint:centerConstraint];
+        
+        //End
+        
         filterViewHeight = CGRectGetHeight(self.view.frame) - filterViewYOrigin - buffer - buffer - CGRectGetHeight(self.sendButton.frame);
     } else {
         filterViewHeight = CGRectGetHeight(self.view.frame) - CGRectGetMaxY(self.previewImageView.frame) - buffer - buffer;
@@ -122,6 +138,7 @@
     self.filterCollectionView.frame = CGRectMake(0, filterViewYOrigin, CGRectGetWidth(self.view.frame), filterViewHeight);
     
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.filterCollectionView.collectionViewLayout;
+    
     flowLayout.itemSize = CGSizeMake(CGRectGetHeight(self.filterCollectionView.frame) - 20, CGRectGetHeight(self.filterCollectionView.frame));
 }
 
