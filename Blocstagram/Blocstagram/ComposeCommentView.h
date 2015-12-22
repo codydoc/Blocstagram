@@ -15,6 +15,7 @@
 - (void) commentViewDidPressCommentButton:(ComposeCommentView *)sender;
 - (void) commentView:(ComposeCommentView *)sender textDidChange:(NSString *)text;
 - (void) commentViewWillStartEditing:(ComposeCommentView *)sender;
+- (void) setText:(NSString *)text;
 
 @end
 
