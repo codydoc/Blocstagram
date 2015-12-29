@@ -13,6 +13,7 @@
 -(instancetype) initWithDictionary:(NSDictionary *)userDictionary{
 
     //WE FINISHED BLOCSTAGRAM!!
+    //We are really done now!
     
     self = [super init]; //Why do we do this?
     
