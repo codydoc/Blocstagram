@@ -12,6 +12,8 @@
 
 -(instancetype) initWithDictionary:(NSDictionary *)userDictionary{
 
+    //WE FINISHED BLOCSTAGRAM!!
+    
     self = [super init]; //Why do we do this?
     
     if(self){
